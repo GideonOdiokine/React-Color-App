@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ColorBox from "./ColorBox";
 import Navbar from "./Navbar";
+import "./Palette.css";
 
 class Palette extends Component {
   state = { level: 500, colorFormat: "hex", open: false };
@@ -19,14 +20,14 @@ class Palette extends Component {
     this.setState({ open: false });
   };
   render() {
-    const colorBoxes = this.props.palette.colors[this.state.level].map(
-      (color) => (
-        <ColorBox
-          background={color[this.state.colorFormat]}
-          name={color.name}
-        />
-      )
-    );
+    const { paletteName, colors, emoji } = this.props.palette;
+    const colorBoxes = colors[this.state.level].map((color) => (
+      <ColorBox
+        background={color[this.state.colorFormat]}
+        name={color.name}
+        key={color.id}
+      />
+    ));
     // rgb(246,113,114)
     /* #f67172 */
     return (
@@ -40,6 +41,10 @@ class Palette extends Component {
           closeMessage={this.closeMessage}
         />
         <div className="Palette-colors">{colorBoxes}</div>
+        <footer className="Palette-footer">
+          {paletteName}
+          <span className="emoji">{emoji}</span>
+        </footer>
       </div>
     );
   }
