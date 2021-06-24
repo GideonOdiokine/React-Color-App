@@ -4,6 +4,7 @@ import "./App.css";
 import Palette from "./Palette";
 import seedColors from "./seedColors";
 import { generatePalette } from "./colorHelpers";
+import PaletteList from "./PaletteList";
 
 class App extends Component {
   findPalette(id) {
@@ -12,10 +13,14 @@ class App extends Component {
     });
   }
   render() {
-    console.log(generatePalette(seedColors[4]))
+    console.log(generatePalette(seedColors[4]));
     return (
       <Switch>
-        <Route exact path="/" render={() => <h2>Palette List Goes Here</h2>} />
+        <Route
+          exact
+          path="/"
+          render={() => <PaletteList palettes={seedColors} />}
+        />
         <Route
           exact
           path="/palette/:id"

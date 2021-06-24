@@ -4,6 +4,7 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import "./Navbar.css";
 import { MenuItem } from "@material-ui/core";
+import { Link } from "react-router-dom";
 // import Snackbar from "@material-ui/core/Snackbar";
 
 const Navbar = ({
@@ -17,7 +18,7 @@ const Navbar = ({
   return (
     <header className="navbar">
       <div className="logo">
-        <a href="/">reactcolorpicker</a>
+        <Link to="/">reactcolorpicker</Link>
       </div>
       <div className="slider-container">
         <span>Level: {level}</span>
@@ -56,7 +57,7 @@ const messageStyle = {
   position: "absolute",
   bottom: "0",
   left: "0",
-  zIndex:'999',
+  zIndex: "999",
   fontSize: "22px",
   fontFamily: "sans-serif",
   borderRadius: "4px",
