@@ -31,6 +31,7 @@ class Palette extends Component {
     // rgb(246,113,114)
     /* #f67172 */
     return (
+      
       <div className="Palette">
         <Navbar
           level={this.state.level}
