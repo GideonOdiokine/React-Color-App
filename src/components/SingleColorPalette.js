@@ -5,7 +5,7 @@ class SingleColorPalette extends Component {
     return (
       <div>
         <h3>SingleColorPalette</h3>
-        <p>jj</p>
+        <p>jjkk</p>
       </div>
     );
   }
