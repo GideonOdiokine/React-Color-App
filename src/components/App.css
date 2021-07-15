@@ -28,9 +28,16 @@ body {
   position: relative;
   cursor: pointer;
   width: 25%;
-  height: 150px;
+  height: 110px;
 }
-.copy-button {
+.singleColorPalette .ColorBox {
+  height: 180px;
+}
+.ColorBox.go-back {
+  background-color: black;
+}
+.copy-button,
+.back-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,6 +54,9 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   font-family: sans-serif;
+  text-decoration: none;
+}
+.copy-button {
   opacity: 0;
 }
 .see-more {
