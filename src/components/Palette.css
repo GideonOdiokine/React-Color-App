@@ -5,6 +5,8 @@
 }
 .Palette-colors {
   height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .Palette-footer {
   height: 5vh;
