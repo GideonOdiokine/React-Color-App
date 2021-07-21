@@ -31,8 +31,7 @@ class Palette extends Component {
         showLink={true}
       />
     ));
-    // rgb(246,113,114)
-    /* #f67172 */
+
     return (
       <div className="Palette">
         <Navbar

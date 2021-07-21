@@ -41,7 +41,7 @@ class ColorBox extends Component {
   };
   render() {
     const { name, background, moreUrl, showLink, classes } = this.props;
-    const isDarkColor = chroma(background).luminance() <= 0.08;
+    const isDarkColor = chroma(background).luminance() <= 0.8;
     const isLightColor = chroma(background).luminance() >= 0.6;
 
     return (
@@ -65,7 +65,11 @@ class ColorBox extends Component {
           </div>
           {showLink && (
             <Link to={moreUrl} onClick={(e) => e.stopPropagation()}>
-              <span className={classes.seeMore}>More</span>
+              <span
+                className={`${classes.seeMore} ${isDarkColor && "white-text"}`}
+              >
+                More
+              </span>
             </Link>
           )}
         </div>
